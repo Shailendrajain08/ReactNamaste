@@ -2,19 +2,19 @@
     display: flex;
     justify-content: space-between;
     line-height: 2px;
-    border-bottom: 1px solid orangered;  
+    border-bottom: 1px solid orangered;
 }
 
 .logo {
     width: 100px;
 }
 
-.navItem > ul {
+.navItem>ul {
     display: flex;
-    
+
 }
 
-.navItem > ul > li{
+.navItem>ul>li {
     padding: 10px;
     margin: 10px;
     list-style: none;
@@ -25,12 +25,26 @@
     color: orangered;
 }
 
+.restaurantCantainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .restaurantCard {
     width: 200px;
-    height: 300px;
+    height: auto;
+    margin: 10px;
+}
+
+.restaurantCard:hover {
     border: 1px solid black;
 }
 
 .Search {
     padding: 10px;
+}
+
+.res-logo {
+    width: 96%;
+    padding: 2%;
 }
