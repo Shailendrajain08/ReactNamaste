@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2px;
+    border-bottom: 1px solid orangered;  
+}
+
+.logo {
+    width: 100px;
+}
+
+.navItem > ul {
+    display: flex;
+    
+}
+
+.navItem > ul > li{
+    padding: 10px;
+    margin: 10px;
+    list-style: none;
+    font-size: 24px;
+}
+
+.liItem:hover {
+    color: orangered;
+}
+
+.restaurantCard {
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.Search {
+    padding: 10px;
+}
