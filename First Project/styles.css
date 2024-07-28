@@ -31,7 +31,7 @@
 }
 
 .restaurantCard {
-    width: 200px;
+    width: 275px;
     height: auto;
     margin: 10px;
 }
@@ -47,4 +47,14 @@
 .res-logo {
     width: 96%;
     padding: 2%;
+    height: 200px;
+}
+
+.card-body{
+    padding-left: 2%;
+}
+
+.filter-btn{
+    margin: 10px 0px 0px 10px;
+    cursor: pointer;
 }
