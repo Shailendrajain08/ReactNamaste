@@ -6,10 +6,11 @@ const RestaurantCard = (props) => {
     cloudinaryImageId,
     name,
     cuisines,
-    avgRating,
+    avgRating, 
     costForTwo,
     deliveryTime,
   } = resData.info;
+  
 
   const StyleCard = {
     backgroundColor: "#f0f0f0",
