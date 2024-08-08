@@ -9,7 +9,7 @@ const RestaurantCard = (props) => {
     avgRating, 
     costForTwo,
     sla,
-  } = resData.info;
+  } = resData;
   
 
   const StyleCard = {
