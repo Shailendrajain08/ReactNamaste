@@ -1,3 +1,4 @@
+import { RESTAURANT_API } from "../utils/constants";
 import restaurantData from "../utils/restaurantData";
 import RestaurantCard from "./RestaurantCard";
 import ShimmerUi from "./Shimmer";
@@ -13,25 +14,25 @@ const Body = () => {
     setResList(filterList);
   };
 
+  //if no dependency array => useEffect is called on every component render
+  //if dependency array is empty = [] => useEffect is called on initial component render(just once)
+  //if dependency array is [filteredRestaurant] => called everytime filteredRestaurant is updated
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
-    // const data = await fetch(
-    //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.2599333&lng=77.412615&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    // ); // Bhopal
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.7195687&lng=75.8577258&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    ); // Indore
-    // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0759837&lng=72.8776559&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")     // mumbai
+      RESTAURANT_API
+    ); 
+    
     const json = await data.json();
     setResList(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilteredRestaurant(
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    )
+    );
   };
 
   //Conditional Rendering

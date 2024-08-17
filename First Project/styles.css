@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     line-height: 2px;
-    border-bottom: 1px solid orangered;
+    border-bottom: 1px solid #FF5200;
 }
 
 .logo {
@@ -21,19 +21,39 @@
     font-size: 24px;
 }
 
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link2{
+    text-decoration: none;
+    color: black;
+    width: 280px;
+    height: auto;
+    margin: 10px;
+}
+
+.link:hover {
+    color: #FF5200;
+}
+
 .liItem:hover {
-    color: orangered;
+    color: #FF5200;
 }
 
 .restaurantCantainer {
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
 }
 
 .restaurantCard {
     width: 280px;
     height: auto;
-    margin: 10px;
+    margin: 10px; 
+    background-color: #f0f0f0;
+    padding-bottom: 20px;
 }
 
 .restaurantCard:hover {
@@ -82,4 +102,92 @@
     margin: 10px 0px 0px 10px;
     display: flex; 
     gap: 15px;
+}
+
+.menu{
+    width: 70%;
+    margin: auto;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px lightgray;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.menu h1 {
+    color: #FF5200;
+    text-decoration: underline;
+}
+
+.cuisines{
+    color: #FF5200;
+    text-decoration: underline;
+}
+
+.resRating{
+    font-size: 18px;
+}
+
+.ratingColorGreen {
+    color: #1ba672;
+}
+
+.ratingColorOrange {
+    color: #E6A408;
+}
+
+.menuHeadline{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 30px;
+    color: #FF5200;
+}
+
+.menuCardView{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    gap: 5%;
+    margin: auto;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    
+}
+
+.menuCardDetails{
+    width: 65%;
+    left: 10px;
+    justify-content: left;
+
+}
+
+.menuCardImgContainer{
+    width: 30%;
+    justify-content: right;
+}
+.menuCardImg{
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    float: right;
+    margin: auto;
+}
+
+.foodName {
+    color: #FF5200;
+}
+
+.resRatingGreen{
+    color: #1ba672;
+}
+
+.resRatingRed{
+    color: #E6A408;
+}
+
+.foodDescription {
+    color: rgb(95, 94, 94);
 }
