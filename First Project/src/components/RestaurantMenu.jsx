@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ShimmerUi from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { FOOD_IMG_URL, MENU_API } from "../utils/constants";
+// import DynamicH1 from "./DynamicH1.JSX";
 
 const RestaurantMenu = () => {
   const [resInfo, setResInfo] = useState(null);
@@ -31,10 +32,21 @@ const RestaurantMenu = () => {
 
   return (
     <>
+    {/* <DynamicH1 /> */}
       <div className="menu">
         <h1>{name}</h1>
         <p className="resRating">
-            {avgRating > 3.5 ? <b className="resRatingGreen"> &#9733; {avgRating} ({totalRatingsString})</b> : <b className="resRatingRed">&#9733; {avgRating} ({totalRatingsString})</b>} - {costForTwoMessage}
+          {avgRating > 3.5 ? (
+            <b className="resRatingGreen">
+              {" "}
+              &#9733; {avgRating} ({totalRatingsString})
+            </b>
+          ) : (
+            <b className="resRatingRed">
+              &#9733; {avgRating} ({totalRatingsString})
+            </b>
+          )}{" "}
+          - {costForTwoMessage}
         </p>
         <p className="cuisines">{cuisines.join(", ")}</p>
       </div>
@@ -71,7 +83,9 @@ const RestaurantMenu = () => {
                       ) : (
                         <p></p>
                       )}
-                      <p className="foodDescription">{response.card.info.description}</p>
+                      <p className="foodDescription">
+                        {response.card.info.description}
+                      </p>
                     </div>
                   </div>
                   <div className="menuCardImgContainer">
