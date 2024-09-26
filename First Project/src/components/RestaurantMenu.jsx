@@ -3,23 +3,14 @@ import { useEffect, useState } from "react";
 import ShimmerUi from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { FOOD_IMG_URL, MENU_API } from "../utils/constants";
+import useRestaurantMenu from "../utils/useRestaurantMenu"
 // import DynamicH1 from "./DynamicH1.JSX";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
 
   const { resId } = useParams();
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-  const fetchMenu = async () => {
-    const data = await fetch(MENU_API + resId);
-
-    const json = await data.json();
-    setResInfo(json?.data);
-  };
+  const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) return <ShimmerUi />;
 
