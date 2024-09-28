@@ -4,7 +4,7 @@ import ShimmerUi from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { FOOD_IMG_URL, MENU_API } from "../utils/constants";
 import useRestaurantMenu from "../utils/useRestaurantMenu"
-// import DynamicH1 from "./DynamicH1.JSX";
+import DynamicH1 from "./DynamicH1.JSX";
 
 const RestaurantMenu = () => {
 
@@ -23,7 +23,7 @@ const RestaurantMenu = () => {
 
   return (
     <>
-    {/* <DynamicH1 /> */}
+    <DynamicH1 />
       <div className="menu">
         <h1>{name}</h1>
         <p className="resRating">
